@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<div>
+    <form action="/images" method="POST">
+        <div class="col-12">
+            <textarea class="form-control" name="text" rows="3"></textarea>
+        </div>
+        <div class="col-12 pt-5">
+            <input type="submit" class="btn btn-dark">
+        </div>
+    </form>
+</div>
+<div>
+    <p class="disclaimer">
+        Lo único que hace esta pequeña aplicación web es traducir la entrada de texto al inglés
+        y enviarlo a la API de DALL·E 2 para hacerla mas accesible a personas que no dominan tanto
+        el idioma nativo de esta IA. La traducción se lleva a cabo mediante Google Translate, así
+        que puede que los resultados no sean del todo óptimos.
+    </p>
+</div>
+{% endblock %}

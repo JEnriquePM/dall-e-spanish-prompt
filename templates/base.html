@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    {% block head %}
+    <!-- CDN Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <link href="{{ url_for('static', path='/css/style.css') }}" rel="stylesheet">
+    <title>{% block title %}{% endblock %} Dall-es</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', path='/svg/favicon.svg') }}">
+    {% endblock %}
+</head>
+
+<body class="w-100 body-cl">
+    <div id="content" class="container h-100 my-auto">
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="col-12">
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500"
+                    version="1.1" id="svg_null" width="200" height="200">
+                    <g id="root" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <rect id="background.primary" fill="#59606D" x="0" y="0" width="500" height="500"></rect>
+                        <g id="Group" transform="translate(40.000000, 293.000000)" fill="none">
+                            <rect id="Rectangle" x="0" y="0" width="420" height="60" fill="none"></rect><text
+                                id="headerText" font-family="Source Code Pro" font-size="60" font-weight="900"
+                                line-spacing="60" fill="#FFFFFF" data-text-alignment="C" font-style="normal">
+                                <tspan x="29.997909545898438" y="49.5" fill="#FFFFFF">DALL · E 2 </tspan>
+                            </text>
+                        </g>
+                        <g id="Group-2" transform="translate(40.000000, 373.000000)" fill="none">
+                            <rect id="Rectangle-2" x="0" y="0" width="420" height="32" fill="none"></rect><text
+                                id="captionText" opacity=".8" font-family="Source Code Pro" font-size="30"
+                                font-weight="300" line-spacing="30" fill="#FFFFFF" data-text-alignment="C"
+                                font-style="normal">
+                                <tspan x="119.99895477294922" y="23" fill="#FFFFFF">en español</tspan>
+                            </text>
+                        </g>
+                        <g id="shape" transform="translate(158.000000, 90.000000)" fill="#FFFFFF">
+                            <path
+                                d="M54 112l-26 0c-15.464 0 -28 -12.536 -28 -28c0 -15.464 12.536 -28 28 -28l26 0c-15.464 0 -28 -12.536 -28 -28c0 -15.464 12.536 -28 28 -28l37 0c15.464 0 28 12.536 28 28c0 15.464 -12.536 28 -28 28l9 0c15.464 0 28 12.536 28 28c0 15.464 -12.536 28 -28 28l-9 0c15.464 0 28 12.536 28 28c0 15.464 -12.536 28 -28 28l-37 0c-15.464 0 -28 -12.536 -28 -28c0 -15.464 12.536 -28 28 -28z"
+                                opacity=".4" fill="#FFFFFF"></path>
+                            <path
+                                d="M73 112l-17 0c-15.464 0 -28 -12.536 -28 -28c0 -15.464 12.536 -28 28 -28l17 0c-15.464 0 -28 -12.536 -28 -28c0 -15.464 12.536 -28 28 -28l37 0c15.464 0 28 12.536 28 28c0 15.464 -12.536 28 -28 28l18 0c15.464 0 28 12.536 28 28c0 15.464 -12.536 28 -28 28l-18 0c15.464 0 28 12.536 28 28c0 15.464 -12.536 28 -28 28l-37 0c-15.464 0 -28 -12.536 -28 -28c0 -15.464 12.536 -28 28 -28z"
+                                opacity=".5" fill="#FFFFFF"></path>
+                            <path
+                                d="M92 112l-8 0c-15.464 0 -28 -12.536 -28 -28c0 -15.464 12.536 -28 28 -28l8 0c-15.464 0 -28 -12.536 -28 -28c0 -15.464 12.536 -28 28 -28l37 0c15.464 0 28 12.536 28 28c0 15.464 -12.536 28 -28 28l27 0c15.464 0 28 12.536 28 28c0 15.464 -12.536 28 -28 28l-27 0c15.464 0 28 12.536 28 28c0 15.464 -12.536 28 -28 28l-37 0c-15.464 0 -28 -12.536 -28 -28c0 -15.464 12.536 -28 28 -28z"
+                                opacity=".6" fill="#FFFFFF"></path>
+                        </g>
+                    </g>
+                </svg>
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+
+<footer>
+    2022 - Desarrollado por <a target="_blank"
+        href="https://www.linkedin.com/in/jos%C3%A9-enrique-plaza-morales-3a098653/">José Enrique Plaza Morales</a>.
+</footer>
+
+</html>
