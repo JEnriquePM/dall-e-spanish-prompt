@@ -42,6 +42,6 @@ async def images(request: Request, text: str = Form(), settings: config.Settings
     api_response = call_dall_e(translated_text, settings.api_key)
     return templates.TemplateResponse("carousel.html", {"request": request, "data": api_response.data})
 
-
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, log_level="info")
+    uvicorn.run("main:app", host="0.0.0.0", port=os.getenv(
+        "PORT", default=5000), log_level="info")
