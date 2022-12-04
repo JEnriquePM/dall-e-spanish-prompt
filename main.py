@@ -7,6 +7,8 @@ from translator import translate_input
 from dall_e_api import call_dall_e
 from pathlib import Path
 import config
+import uvicorn
+import os
 
 app = FastAPI()
 
@@ -39,3 +41,7 @@ async def images(request: Request, text: str = Form(), settings: config.Settings
     translated_text = translate_input(text)
     api_response = call_dall_e(translated_text, settings.api_key)
     return templates.TemplateResponse("carousel.html", {"request": request, "data": api_response.data})
+
+
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, log_level="info")
