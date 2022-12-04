@@ -17,9 +17,9 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
-    <link href="{{ url_for('static', path='/css/style.css') }}" rel="stylesheet">
-    <title>{% block title %}{% endblock %} Dall-es</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/style.css') }}">
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', path='/svg/favicon.svg') }}">
+    <title>{% block title %}{% endblock %} Dall-es</title>
     {% endblock %}
 </head>
 
